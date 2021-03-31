@@ -1,0 +1,28 @@
+.contentAnhBia{
+    padding: 80px 0;
+    .anhBia{
+        background-image: url(/src/Asset/Login/duoc_mi_pham.png);
+        background-size: cover;
+        background-position: center;
+        height: 650px;
+    }
+}
+
+
+@include responsive("medium"){
+    .contentAnhBia{
+        .anhBia{
+            height: 300px;
+        }
+    }
+    
+}
+
+@include responsive("small"){
+    .contentAnhBia{
+        .anhBia{
+            height: 250px;
+        }
+    }
+    
+}

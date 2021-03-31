@@ -1,0 +1,78 @@
+// variable color
+$color-black-0: #29303b; // default
+$color-white-0: #fff; //default
+
+$color-green-0: #4EA62E;
+$color-green-1: #428C27;
+$color-green-2: #2E611B;
+$color-green-3: #254F16;
+$color-green-4: #0A3D11;
+
+$color-trans:transparent;
+
+// variable font-size
+$fs-0: 1.0rem; //default
+$fs-1: 1.2rem;
+$fs-2: 1.4rem;
+$fs-3: 24px;
+$fs-4: 60px;
+//Còn 1 font-size: 36px;
+$fs-4: 40px;
+$fs-5: 32px;
+$fs-6: 3rem;
+
+//variable margin
+$mg-0: 2px;
+$mg-1: 10px;
+$mg-2: 25px;
+
+//variable border-radius
+$border-radius: 1.95rem;
+
+//variable padding
+$pd-0: 5px; //default
+$pd-1: .5rem;
+$pd-2: 2rem;
+
+
+
+//variable line-height
+$line-height-0: 1.43; //default
+
+
+//variable font-weight
+$fw-normal: normal;
+$fw-bold-0: 100;
+$fw-bold-1: 400;
+$fw-bold-2: 600;
+$fw-bold-3: 700;
+$fw-bold: bold;
+
+
+//break points
+$breakpoints:(
+    // biến đối tượng, coi như mảng
+    
+    'extra-extra-extra-large': 1370px,
+    'extra-extra-large': 1350px,
+    'extra-large': 1200px,
+    'large' : 992px,
+    'medium' : 768px,
+    'small' : 576px,
+
+    "iphone678plus": 420px,
+    "iphonex": 395px,
+    "iphone5": 325px,
+)
+
+
+
+
+
+
+
+
+
+
+
+

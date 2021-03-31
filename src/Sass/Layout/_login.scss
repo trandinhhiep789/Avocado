@@ -1,0 +1,128 @@
+// // #c5ecfd;
+
+// div{
+//   .loginMain{
+
+//     background-image: url(/src/Asset/Login/login2.png);
+//     background-size: cover;
+//     background-position: center;
+//     height: 660px;
+
+
+//     .container{
+//       .row{
+//         position: relative;
+
+//         .loginContent{
+//           position: absolute;
+//           top: 30%;
+
+//           .fdb-box{
+//             .hang1{
+//               h2{
+//                 color: #c5ecfd;
+                
+//                 font-family: 'Kiwi Maru', serif;
+//               }
+//             }
+//             .hang2{
+
+//             }
+//             .hang3{
+
+//             }
+//             .hang4{
+
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.container{
+  // background-image: url(/src/Asset/Login/login2.png);
+  // height : 680px ;
+  .row{
+    // position: relative;
+    // top: 25%;
+    // right: 10%;
+    // align-items: center;
+  }
+
+}
+.tong{
+  padding-top: 70px;
+  background-image: url(/src/Asset/Login/login2.png);
+  background-position: center;
+
+  height : 650px ;
+}
+
+//input
+.custom-field {
+  position: relative;
+  font-size: 14px;
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+
+.custom-field input {
+  border: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #f2f2f2;
+  padding: 12px;
+  border-radius: 3px;
+  width: 250px;
+  outline: none;
+  font-size: 14px;
+}
+
+.custom-field .placeholder {
+  position: absolute;
+  left: 12px;
+  top: calc(50% + 10px);
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: 
+    top 0.3s ease,
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.custom-field input.dirty + .placeholder,
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder {
+  top: 10px;
+  font-size: 10px;
+  color: white;
+}
+
+
+.custom-field.two input {
+  border-radius: 0;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background:
+    linear-gradient(90deg, #2E611B, #2E611B) center bottom/0 0.15em no-repeat,
+    linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
+    linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
+  transition: background-size 0.3s ease;
+}
+
+.custom-field.two input.dirty,
+.custom-field.two input:valid,
+.custom-field.two input:focus {
+  background-size: 100% 0.15em, 100% 0.1em, 100%;
+}
+
+
+.form_login{
+  background-color: #4ea62e75;
+  padding: 10px 0 10px 0;
+  
+}

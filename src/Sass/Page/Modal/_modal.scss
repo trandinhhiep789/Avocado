@@ -1,0 +1,42 @@
+.ReactModal__Content{
+    width: 80%;
+    margin: 90px auto;
+    height: 500px;
+    
+    
+    
+}
+
+
+@include responsive("extra-extra-large"){
+    .ReactModal__Content{
+        margin-top: 50px;
+    }
+}
+
+@include responsive("extra-large"){
+    .ReactModal__Content{
+        margin-top: 50px;
+        width: 60%;
+    }
+}
+@include responsive("small"){
+    .ReactModal__Content{
+        margin-top: 35px;
+    }
+}
+@include responsive("iphone678plus"){
+    .ReactModal__Content{
+        margin-top: 80px;
+        width: 70%;
+    }
+}
+
+@include responsive("iphone5"){
+    .ReactModal__Content{
+        margin-top: 40px;
+        width: 80%;
+        margin-left: -15px;
+
+    }
+}

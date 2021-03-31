@@ -1,0 +1,39 @@
+.scroll-to-top{
+    position: fixed;
+    bottom: 50px;
+    right: -3%;
+    // width: 40px;
+    // height: 40px;
+    // border-radius: 100%;
+    // box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    // background-color: $color-green-0;
+    color: rebeccapurple;
+    cursor: pointer;
+    z-index: 1;
+    transform: rotate(-90deg);
+    .icon{
+        color: wheat;
+        // margin-top: 10px;
+        // margin-left: 13px;
+        animation: scrollTop 0.5s alternate ease infinite;
+    }
+}
+@keyframes scrollTop{
+    from {
+        transform: translateY(2px);
+    }
+    to{
+        transform: translateY(-1px);
+    }
+}
+
+@include responsive ("medium"){
+    .scroll-to-top{
+        right: -8%;
+    }
+}
+@include responsive ("small"){
+    .scroll-to-top{
+        right: -10%;
+    }
+}

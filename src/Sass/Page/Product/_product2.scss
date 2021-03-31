@@ -1,0 +1,35 @@
+.pro2{
+    
+    .card{
+        .imgProduct2{
+            background-image: url(/src/Asset/Carousel/kem_duong_2.png);
+            background-size: cover;
+            height: 240px;
+            width: 100%;
+            // border: 1px solid rgb(15, 226, 138);
+            cursor: pointer;
+
+            position: relative;
+
+            .xem2{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+                color: $color-green-1;
+                font-weight: 700;
+                border-radius: 0;
+
+                transition: all .5s;
+                box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+                opacity: 0;
+
+            }
+        }
+        :hover .xem2{
+            opacity: 1;
+        }
+    }
+
+}

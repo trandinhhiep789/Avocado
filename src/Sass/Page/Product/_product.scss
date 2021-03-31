@@ -1,0 +1,25 @@
+.card{
+    margin: 0 auto;
+    border: none;
+    .card-body{
+        padding: 0 !important;
+        .tieuDeCard{
+            @include styleText($color-green-1,$fs-0,$fw-bold-3)
+        }
+        .noiDungCard{
+
+        }
+        .gia{
+            .giaHienTai{
+                font-weight: 900;
+            }
+            .giaCu{
+                text-decoration: line-through;
+                opacity: 0.5;
+            }
+        }
+        button{
+            border-radius: 0 !important;
+        }
+    }
+}

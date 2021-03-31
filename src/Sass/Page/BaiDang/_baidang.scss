@@ -1,0 +1,376 @@
+div{
+    .container{
+        .noidungBaiDang{
+            padding: 30px;
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            
+            h1{
+                border-bottom: 3px solid $color-green-0;
+                padding: 10px;
+            }
+        }
+        .row{
+            .cot1{
+                
+                padding: 10px;
+                // position: relative;
+                // cursor: pointer;
+
+                .baiDang1{
+                    background-image: url(/src/Asset/BaiDang/1.png);
+                    background-size: cover;
+                    background-position: center;
+
+                    height: 350px;
+                    position: relative;
+
+                    
+                    overflow: hidden;
+
+
+                    .noiDung1{
+                        position: absolute;
+                        width: 100%;
+                        bottom: 0;
+                        background-color:$color-green-0;
+                        
+                        transition: all .5s;
+
+                        h3{
+                            color: white;
+                            padding: 5px;
+                            font-weight: 700;
+                        }
+                    }
+                    .overLayBaiDang1{
+                        background-color: rgba(0, 0, 0, 0.568);
+                        height: 100%;
+                        padding: 30px;
+                        color: white;
+
+                        transition: all .5s;
+                        transform: translateY(-150%);
+                        // opacity: 0;
+                        h3{
+                            color: $color-green-0;
+                            font-weight: 700;
+                        }
+                        button{
+                            border-radius: 0;
+                            width: 100%;
+                    }
+
+
+                }
+
+                }
+
+                
+                :hover .overLayBaiDang1{
+                    transform: translateX(0);
+                }
+                :hover .noiDung1{
+                    opacity: 0;
+                }
+
+                
+            
+            }
+            
+
+
+            .cot2{
+                
+                padding: 10px;
+                // position: relative;
+                cursor: pointer;
+
+                .baiDang2{
+                    background-image: url(/src/Asset/BaiDang/1.png);
+                    background-size: cover;
+                    background-position: center;
+
+                    height: 350px;
+                    position: relative;
+
+                    
+                    overflow: hidden;
+
+
+                    .noiDung2{
+                        position: absolute;
+                        width: 100%;
+                        bottom: 0;
+                        background-color:$color-green-0;
+                        
+                        transition: all .5s;
+
+                        h3{
+                            color: white;
+                            padding: 5px;
+                            font-weight: 700;
+                        }
+                    }
+                    .overLayBaiDang2{
+                        background-color: rgba(0, 0, 0, 0.568);
+                        height: 100%;
+                        padding: 30px;
+                        color: white;
+
+                        transition: all .5s;
+                        transform: translateY(-150%);
+                        // opacity: 0;
+                        h3{
+                            color: $color-green-0;
+                            font-weight: 700;
+                        }
+                        button{
+                            border-radius: 0;
+                            width: 100%;
+                        }
+
+
+                }
+
+                }
+
+                
+                :hover .overLayBaiDang2{
+                    transform: translateX(0);
+                }
+                :hover .noiDung2{
+                    opacity: 0;
+                }
+
+                
+            
+            }
+        }
+    }
+}
+
+@include responsive("large"){
+    div{
+        .container{
+            .noidungBaiDang{
+                width: 60%;
+
+                h1{
+                    font-size: 30px;
+                }
+            }
+            .row{
+                .cot1{
+                    .baiDang1{
+                        .overLayBaiDang1{
+                            height: 100%;
+                            padding: 20px;
+                            // opacity: 0;
+                            h3{
+                                font-size: 20px;
+                                color: $color-green-0;
+                                font-weight: 700;
+                            }
+                            button{
+                                border-radius: 0;
+                                width: 100%;
+                        }
+                    }
+                }
+            
+            
+            }
+            .cot2{
+                .baiDang2{
+                    .overLayBaiDang2{
+                        height: 100%;
+                        padding: 10px;
+                        // opacity: 0;
+                        h3{
+                            font-size: 22px;
+                            color: $color-green-0;
+                            font-weight: 700;
+                        }
+                        button{
+                            border-radius: 0;
+                            width: 100%;
+                    }
+                }
+            }
+        
+        
+        }
+        }
+    }
+}
+}
+
+@include responsive("medium"){
+    div{
+        .container{
+            .noidungBaiDang{
+                width: 60%;
+
+                h1{
+                    font-size: 30px;
+                }
+            }
+            .row{
+                .cot1{
+                    .baiDang1{
+                        .overLayBaiDang1{
+                            height: 100%;
+                            padding: 20px;
+                            // opacity: 0;
+                            h3{
+                                font-size: 20px;
+                                color: $color-green-0;
+                                font-weight: 700;
+                            }
+                            button{
+                                border-radius: 0;
+                                width: 100%;
+                        }
+                    }
+                }
+            
+            
+            }
+            .cot2{
+                .baiDang2{
+                    .overLayBaiDang2{
+                        height: 100%;
+                        padding: 10px;
+                        // opacity: 0;
+                        h3{
+                            font-size: 22px;
+                            color: $color-green-0;
+                            font-weight: 700;
+                        }
+                        button{
+                            border-radius: 0;
+                            width: 100%;
+                    }
+                }
+            }
+        
+        
+        }
+        }
+    }
+}
+}
+
+@include responsive("iphonex"){
+    div{
+        .container{
+            .noidungBaiDang{
+                width: 60%;
+
+                h1{
+                    font-size: 30px;
+                }
+            }
+            .row{
+                .cot1{
+                    .baiDang1{
+                        .overLayBaiDang1{
+                            height: 100%;
+                            padding: 10px;
+                            // opacity: 0;
+                            h3{
+                                font-size: 22px;
+                                color: $color-green-0;
+                                font-weight: 700;
+                            }
+                            button{
+                                border-radius: 0;
+                                width: 100%;
+                        }
+                    }
+                }
+            
+            
+            }
+            .cot2{
+                .baiDang2{
+                    .overLayBaiDang2{
+                        height: 100%;
+                        padding: 10px;
+                        // opacity: 0;
+                        h3{
+                            font-size: 22px;
+                            color: $color-green-0;
+                            font-weight: 700;
+                        }
+                        button{
+                            border-radius: 0;
+                            width: 100%;
+                    }
+                }
+            }
+        
+        
+        }
+        }
+    }
+}
+}
+
+@include responsive("iphone5"){
+    div{
+        .container{
+            .noidungBaiDang{
+                width: 60%;
+
+                h1{
+                    font-size: 30px;
+                }
+            }
+            .row{
+                .cot1{
+                    .baiDang1{
+                        .overLayBaiDang1{
+                            height: 100%;
+                            padding: 10px;
+                            // opacity: 0;
+                            h3{
+                                font-size: 18px;
+                                color: $color-green-0;
+                                font-weight: 700;
+                            }
+                            button{
+                                border-radius: 0;
+                                width: 100%;
+                        }
+                    }
+                }
+            
+            
+            }
+            .cot2{
+                .baiDang2{
+                    .overLayBaiDang2{
+                        height: 100%;
+                        padding: 10px;
+                        // opacity: 0;
+                        h3{
+                            font-size: 22px;
+                            color: $color-green-0;
+                            font-weight: 700;
+                        }
+                        button{
+                            border-radius: 0;
+                            width: 100%;
+                    }
+                }
+            }
+        
+        
+        }
+        }
+    }
+}
+}

@@ -1,0 +1,84 @@
+header{
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    .header_main{
+        background-color: white;
+        color: $color-green-0;
+        .navbar{
+            div{
+                a{
+                    img{
+                        width: 150px;
+                    }
+                }
+            }
+    
+            .collapse{
+                ul{
+                    a{
+                        cursor: pointer;
+                        font-family: 'Kiwi Maru', serif;
+                        @include styleText($color-green-1, $fs-2, $fw-bold-3)
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("extra-extra-extra-large"){
+    header{
+        .header_main{
+            .navbar{
+                .gioHang{
+                    display: none;
+                }
+        
+            }
+        }
+    }
+}
+
+
+@include responsive("medium"){
+    header{
+        .header_main{
+            .navbar{
+                .gioHang{
+                    display: block;
+                    font-size: 20px;
+                }
+                .collapse{
+                    ul{
+                        li{
+                            .gioHangSau{
+                                display: none;
+                            }
+                        }
+                    }
+                }
+        
+            }
+        }
+    }
+}
+
+@include responsive("small"){
+    header{
+        .header_main{
+            .navbar{
+                div{
+                    a{
+                        img{
+                            width: 100px;
+                        }
+                    }
+                }
+        
+            }
+        }
+    }
+}
+

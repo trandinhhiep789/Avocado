@@ -1,0 +1,402 @@
+.carouselMain {
+    width: 100%;
+    text-align: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 91px;
+
+    .carouselMainItem{
+      .item1 {
+        position: relative;
+        
+        background-image: url("/src/Asset/CarouselMain/2.png");
+        background-size: cover;
+        height: 450px;
+        width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+
+          .item2{
+            width: 34%;
+            height: 270px;
+
+            position: absolute;
+            top: 20%;
+            right: 10%;
+
+            .itemContent{
+              h5{
+                margin: 25px 25px 0 25px;
+                @include styleText($color-green-1, $fs-2, $fw-bold-3);
+                text-align: left;
+              }
+              h6{
+                margin: 15px 25px 12px 25px;
+                @include styleText($color-black-0, $fs-0, $fw-bold-3);
+                text-align: left;
+              }
+              p{
+                margin: 0 25px;
+                text-align: left;
+                font-size: 13px;
+              }
+              div{
+                margin: 15px 25px 25px 25px;
+                cursor: pointer;
+                
+                text-align: left;
+                a{
+                  @include styleText($color-green-1,$fs-1, $fw-bold-2);
+                  text-decoration: none;
+                }
+                i{
+                  color: $color-green-1;
+                  font-size: 25px;
+                }
+              }
+            }
+
+            
+
+          }
+      }
+    }
+}
+
+.carouselMain .slick-dots {
+    top: 90%;
+    bottom: 0;
+    height: 8px;
+  }
+  
+  .carouselMain .slick-dots li button::before {
+    font-size: 12px;
+    color: #fff;
+    opacity: 1;
+  }
+  
+  .carouselMain .slick-dots li.slick-active button::before {
+    color: $color-green-3;
+  }
+  .nextMain {
+    position: absolute;
+    right: 5%;
+    top: 48%;
+    font-size: 35px;
+  }
+  
+  .prevMain {
+    position: absolute;
+    left: 5%;
+    top: 48%;
+    font-size: 35px;
+    z-index: 5;
+  }
+
+
+  @include responsive('extra-extra-large'){
+    .carouselMain{
+      .carouselMainItem{
+        .item1{
+          .item2{
+            .itemContent{
+              h5{
+                margin: 18px 25px 0 25px;
+              }
+              h6{
+                margin: 13px 25px 10px 25px;
+              }
+              p{
+
+              }
+              div{
+                margin: 8px 25px 25px 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive('extra-large'){
+    .carouselMain{
+      .carouselMainItem{
+        .item1{
+          .item2{
+            .itemContent{
+              h5{
+                font-size: 18px;
+              }
+              h6{
+                margin: 10px 25px 10px 25px;
+              }
+              p{
+
+              }
+              div{
+                margin: 6px 25px 25px 25px;
+                a{
+                  font-size: 11px;
+                  i{
+                    font-size: 11px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @include responsive('large'){
+    .carouselMain{
+      .carouselMainItem{
+        .item1{
+          .item2{
+            top: 30%;
+            height: 190px;
+            height: 260px;
+            .itemContent{
+              h5{
+                font-size: 15px;
+              }
+              h6{
+                font-size: 13px;
+              }
+              p{
+                font-size: 11px;
+              }
+              div{
+                margin: 5px 25px 25px 25px;
+                a{
+                  font-size: 10px;
+                  i{
+                    font-size: 10px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive('medium'){
+    .carouselMain{
+      .carouselMainItem{
+        .item1{
+          .item2{
+            width: 40%;
+            top: 30%;
+            height: 240px;
+            .itemContent{
+              h5{
+                font-size: 12px;
+              }
+              h6{
+                font-size: 12px;
+              }
+              p{
+                font-size: 10px;
+              }
+              div{
+                
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive('small'){
+    .carouselMain{
+      padding-top: 65px;
+      
+      .carouselMainItem{
+        .item1{
+          height: 350px;
+          .item2{
+            width: 50%;
+            top:20%;
+            height: 240px;
+            .itemContent{
+              h5{
+
+              }
+              h6{
+
+              }
+              p{
+
+              }
+              div{
+                
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nextMain {
+      right: 5%;
+      top: 48%;
+      font-size: 20px;
+    }
+    
+    .prevMain {
+      left: 5%;
+      top: 48%;
+      font-size: 20px;
+    }
+  }
+
+
+  @include responsive('iphone678plus'){
+    .carouselMain{
+      
+      .carouselMainItem{
+        .item1{
+          height: 350px;
+          .item2{
+            width: 50%;
+            top:10%;
+            height: 250px;
+            .itemContent{
+              h5{
+                margin: 10px;
+              }
+              h6{
+                margin: 10px;
+              }
+              p{
+                margin: 10px;
+              }
+              div{
+                margin: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nextMain {
+      right: 5%;
+      top: 48%;
+      font-size: 20px;
+    }
+    
+    .prevMain {
+      left: 5%;
+      top: 48%;
+      font-size: 20px;
+    }
+  }
+
+  
+  @include responsive('iphonex'){
+    .carouselMain{
+      
+      .carouselMainItem{
+        .item1{
+          height: 350px;
+          .item2{
+            width: 50%;
+            top:10%;
+            height: 280px;
+            .itemContent{
+              h5{
+                margin: 10px;
+              }
+              h6{
+                margin: 10px;
+              }
+              p{
+                margin: 10px 10px 0 10px;
+              }
+              div{
+                margin: 0;
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nextMain {
+      right: 5%;
+      top: 48%;
+      font-size: 20px;
+    }
+    
+    .prevMain {
+      left: 5%;
+      top: 48%;
+      font-size: 20px;
+    }
+  }
+
+  @include responsive('iphone5'){
+    .carouselMain{
+      
+      .carouselMainItem{
+        .item1{
+          height: 350px;
+          .item2{
+            width: 60%;
+            top:10%;
+            height: 290px;
+            .itemContent{
+              h5{
+                margin: 10px;
+              }
+              h6{
+                margin: 10px;
+              }
+              p{
+                margin: 10px;
+              }
+              div{
+                margin: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .nextMain {
+      right: 5%;
+      top: 48%;
+      font-size: 20px;
+    }
+    
+    .prevMain {
+      left: 5%;
+      top: 48%;
+      font-size: 20px;
+    }
+  }
+
+  #hinh2{
+    background-image: url("/src/Asset/CarouselMain/5BUOC_2.png");
+        background-size: cover;
+        height: 450px;
+        width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+  }

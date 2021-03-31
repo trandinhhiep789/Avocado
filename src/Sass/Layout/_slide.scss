@@ -1,0 +1,19 @@
+.slide{
+    padding-top: 120px;
+    h3{
+        font-weight: 400;
+        padding: 30px;
+    }
+}
+
+.slide_tieude{
+    padding-top: 100px;
+    @include styleText($color-black-0, $fs-0, $fw-bold-3)
+}
+
+.hinh1{
+    background-image: url(/src/Asset/Slide/1.png);
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+}
