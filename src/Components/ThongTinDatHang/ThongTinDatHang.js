@@ -10,16 +10,75 @@ import { setLaiGioHang } from "../../Redux/Action/QuanLySanPhamAction";
 export default function ThongTinDatHang() {
   const dispatch = useDispatch();
   const mangGioHang = useSelector((state) => state.stateSanPham.gioHang);
+  const mangGioHangDaDat = useSelector((state) => state.stateSanPham.gioHang);
 
-  const locThongTinChinh = () => {
-    return mangGioHang.map((sp, i) => {
+  const renderGiohang = () => {
+    return mangGioHangDaDat.map((sp, i) => {
       return (
-        <>
-          `ma san pham :{sp.maSanPham}, so luong: {sp.soLuong} ||`
-        </>
+        <tr key={i}>
+          <td>
+            <img width={100} height={100} src={sp.hinhAnh} />
+            {/* {sp.hinhAnh} */}
+          </td>
+          <td>{sp.tenSanPham}</td>
+          <td>
+            {/* <button
+              className=""
+              onClick={() => {
+                dispatch(tangGiamSanPham(sp.maSanPham, false));
+              }}
+            >
+              -
+            </button> */}
+            Số lượng:
+            {sp.soLuong}
+            {/* <button
+              className=""
+              onClick={() => {
+                dispatch(tangGiamSanPham(sp.maSanPham, true));
+              }}
+            >
+              +
+            </button> */}
+          </td>
+          {/* <td>{sp.donGia}</td> */}
+          {/* <td>{sp.soLuong * sp.donGia}</td> */}
+          {/* <td>
+            <button
+              onClick={() => {
+                dispatch(xoaSanPham(sp.maSanPham));
+              }}
+            >
+              Xóa
+            </button>
+          </td> */}
+        </tr>
       );
     });
   };
+  const tongTien = () => {
+    return mangGioHang.reduce((tong, mangGioHang, i) => {
+      return (tong += mangGioHang.soLuong * mangGioHang.donGia);
+    }, 0);
+  };
+
+  // const locThongTinChinh = () => {
+  //   return mangGioHang.map((sp, i) => {
+  //     return (
+  //       <>
+  //         `ma san pham :{sp.maSanPham}, so luong: {sp.soLuong} ||`
+  //       </>
+  //     );
+  //   });
+  // };
+
+  // return mangGioHang.reduce((thongTin, sp, index, mangGioHang) => {
+  //   return `${thongTin}`;
+  // }, "");
+
+  let maHaThongTin = mangGioHang.reduce((thongTin, sp, index, mangGioHang) => {
+    return `${thongTin} Mã sản phẩm:${sp.maSanPham} || Số lượng: ${sp.soLuong}, `;
+  }, "");
 
   function sendEmail(e) {
     e.preventDefault();
@@ -62,8 +121,8 @@ export default function ThongTinDatHang() {
   return (
     <div className="contentDatHang">
       <div className="container">
-        <div>
-          <form onSubmit={sendEmail}>
+        <div className="row">
+          <form className="col-12 col-xl-6" onSubmit={sendEmail}>
             <h1>Thông tin thanh toán</h1>
             <div className="my-3">
               Họ và tên
@@ -83,6 +142,7 @@ export default function ThongTinDatHang() {
                 type="text"
                 name="thongTinDonHang"
                 className="form-control"
+                value={maHaThongTin}
                 // value={locThongTinChinh().map((sp, i) => {
                 //   return (
                 //     <>
@@ -92,6 +152,7 @@ export default function ThongTinDatHang() {
                 // })}
               />
             </div>
+
             <button
               className="btn btn-success w-100"
               style={{ borderRadius: "0" }}
@@ -99,8 +160,18 @@ export default function ThongTinDatHang() {
               Đặt hàng!
             </button>
           </form>
+          <div className="col-12 col-xl-6">
+            {renderGiohang()}
+            <br></br>
+            <div style={{ fontWeight: "700" }}>
+              Tổng tiền (chưa tính phí ship):
+            </div>
+            <div style={{ fontWeight: "700", fontSize: "40px" }}>
+              {tongTien()},000đ
+            </div>
+          </div>
         </div>
-        <div>{locThongTinChinh()}</div>
+        {/* <div>{maHaThongTin}</div> */}
       </div>
     </div>
   );
