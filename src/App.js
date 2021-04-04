@@ -14,6 +14,7 @@ import AboutUS from "./Components/AboutUS";
 import ScrollToTop from "./Components/ScrollToTop";
 import GioHang from "./Components/GioHang/GioHang";
 import ThongTinDatHang from "./Components/ThongTinDatHang/ThongTinDatHang";
+import MessengerCustomerChat from "react-messenger-customer-chat";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
 
         <HomeTemplate exact path="/slide1" Component={Slide_1} />
       </Switch>
+      {/* <MessengerCustomerChat pageId="112035807606509" appId="313735936845071" /> */}
     </>
   );
 }

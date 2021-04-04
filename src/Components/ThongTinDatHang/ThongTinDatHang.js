@@ -83,13 +83,13 @@ export default function ThongTinDatHang() {
                 type="text"
                 name="thongTinDonHang"
                 className="form-control"
-                value={locThongTinChinh().map((sp, i) => {
-                  return (
-                    <>
-                      `ma san pham :{sp.maSanPham}, so luong: {sp.soLuong} ||`
-                    </>
-                  );
-                })}
+                // value={locThongTinChinh().map((sp, i) => {
+                //   return (
+                //     <>
+                //       `ma san pham :{sp.maSanPham}, so luong: {sp.soLuong} ||`
+                //     </>
+                //   );
+                // })}
               />
             </div>
             <button
