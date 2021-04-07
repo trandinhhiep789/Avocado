@@ -62,20 +62,6 @@ export default function ThongTinDatHang() {
     }, 0);
   };
 
-  // const locThongTinChinh = () => {
-  //   return mangGioHang.map((sp, i) => {
-  //     return (
-  //       <>
-  //         `ma san pham :{sp.maSanPham}, so luong: {sp.soLuong} ||`
-  //       </>
-  //     );
-  //   });
-  // };
-
-  // return mangGioHang.reduce((thongTin, sp, index, mangGioHang) => {
-  //   return `${thongTin}`;
-  // }, "");
-
   let maHaThongTin = mangGioHang.reduce((thongTin, sp, index, mangGioHang) => {
     return `${thongTin} Mã sản phẩm:${sp.maSanPham} || Số lượng: ${sp.soLuong}, `;
   }, "");
@@ -118,6 +104,7 @@ export default function ThongTinDatHang() {
     e.target.reset();
   }
 
+  const onSubmit = (data) => console.log(data);
   return (
     <div className="contentDatHang">
       <div className="container">

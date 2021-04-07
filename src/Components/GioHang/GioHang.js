@@ -6,11 +6,64 @@ import {
   tangGiamSanPham,
 } from "../../Redux/Action/QuanLySanPhamAction";
 
-import abc from "../../Asset/Carousel/tay_trang_2.png";
+import gioHangTrong from "../../Asset/GioHang/empty_cart.png";
+
+//validate
+import isEmpty from "validator/lib/isEmpty";
 
 export default function GioHang() {
   const dispatch = useDispatch();
   const mangGioHang = useSelector((state) => state.stateSanPham.gioHang);
+
+  console.log("mangGioHang");
+  console.log(mangGioHang);
+
+  if (mangGioHang.length == []) {
+    return (
+      <div
+        className="text-center"
+        style={{ paddingTop: "130px", paddingBottom: "130px" }}
+      >
+        <div className="emptycart">
+          <div className="emptycartImg"></div>
+          <img src={gioHangTrong} />
+        </div>
+        <p className="m-3 p-3">Không có sản phẩm nào trong giỏ hàng của bạn</p>
+        <NavLink
+          to="/trangchu"
+          className="bg-success text-light p-3"
+          style={{ textDecoration: "none" }}
+        >
+          Tiếp tục mua hàng
+        </NavLink>
+      </div>
+    );
+  } else {
+    if (mangGioHang[0].maSanPham == 0) {
+      console.log("mangGioHang[0].maSanPham == 0");
+      return (
+        <div
+          className="text-center"
+          style={{ paddingTop: "130px", paddingBottom: "130px" }}
+        >
+          <div className="emptycart">
+            <div className="emptycartImg"></div>
+            <img src={gioHangTrong} />
+          </div>
+          <p className="m-3 p-3">
+            Không có sản phẩm nào trong giỏ hàng của bạn
+          </p>
+          <NavLink
+            to="/trangchu"
+            className="bg-success text-light p-3"
+            style={{ textDecoration: "none" }}
+          >
+            Tiếp tục mua hàng
+          </NavLink>
+        </div>
+      );
+    }
+  }
 
   const renderGiohang = () => {
     return mangGioHang.map((sp, i) => {
@@ -87,6 +140,7 @@ export default function GioHang() {
             <NavLink
               to="/thongtindathang"
               className="bg-success mt-2 p-2 text-light"
+              style={{ textDecoration: "none" }}
             >
               Thanh Toán
             </NavLink>

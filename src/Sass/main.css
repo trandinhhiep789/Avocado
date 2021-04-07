@@ -487,6 +487,10 @@ header .header_main {
   color: #4EA62E;
 }
 
+header .header_main .navbar .gioHang {
+  display: none;
+}
+
 header .header_main .navbar div a img {
   width: 150px;
 }
@@ -497,12 +501,6 @@ header .header_main .navbar .collapse ul a {
   color: #428C27;
   font-size: 1.4rem;
   font-weight: 700;
-}
-
-@media screen and (max-width: 1370px) {
-  header .header_main .navbar .gioHang {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 768px) {

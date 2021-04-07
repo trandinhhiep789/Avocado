@@ -14,9 +14,14 @@ import AboutUS from "./Components/AboutUS";
 import ScrollToTop from "./Components/ScrollToTop";
 import GioHang from "./Components/GioHang/GioHang";
 import ThongTinDatHang from "./Components/ThongTinDatHang/ThongTinDatHang";
-import MessengerCustomerChat from "react-messenger-customer-chat";
+
+import { useSelector, useDispatch } from "react-redux";
 
 function App() {
+  const mangGioHang = useSelector((state) => state.stateSanPham.gioHang);
+
+  // console.log(mangGioHang[0].maSanPham);
+
   return (
     // component khac Component nay
     <>
@@ -32,15 +37,42 @@ function App() {
 
         <HomeTemplate exact path="/login" Component={Login} />
         <HomeTemplate exact path="/giohang" Component={GioHang} />
-        <HomeTemplate
+        {/* <HomeTemplate
           exact
           path="/thongtindathang"
           Component={ThongTinDatHang}
-        />
+        /> */}
+
+        {/* {mangGioHang[0].maSanPham != 0 || mangGioHang != [] ? (
+          <Switch>
+            <HomeTemplate
+              exact
+              path="/thongtindathang"
+              Component={ThongTinDatHang}
+            />
+          </Switch>
+        ) : (
+          "not"
+        )} */}
+
+        {mangGioHang.length != [] ? (
+          mangGioHang[0].maSanPham != 0 ? (
+            <Switch>
+              <HomeTemplate
+                exact
+                path="/thongtindathang"
+                Component={ThongTinDatHang}
+              />
+            </Switch>
+          ) : (
+            "not"
+          )
+        ) : (
+          "not"
+        )}
 
         <HomeTemplate exact path="/slide1" Component={Slide_1} />
       </Switch>
-      {/* <MessengerCustomerChat pageId="112035807606509" appId="313735936845071" /> */}
     </>
   );
 }

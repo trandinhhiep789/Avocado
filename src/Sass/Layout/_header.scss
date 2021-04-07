@@ -7,6 +7,9 @@ header{
         background-color: white;
         color: $color-green-0;
         .navbar{
+            .gioHang{
+                display: none;
+            }
             div{
                 a{
                     img{
@@ -28,18 +31,18 @@ header{
     }
 }
 
-@include responsive("extra-extra-extra-large"){
-    header{
-        .header_main{
-            .navbar{
-                .gioHang{
-                    display: none;
-                }
+// @include responsive("extra-extra-extra-large"){
+//     header{
+//         .header_main{
+//             .navbar{
+//                 .gioHang{
+//                     display: none;
+//                 }
         
-            }
-        }
-    }
-}
+//             }
+//         }
+//     }
+// }
 
 
 @include responsive("medium"){
