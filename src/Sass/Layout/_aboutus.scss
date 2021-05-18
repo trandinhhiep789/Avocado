@@ -99,9 +99,10 @@
   
 
 .aboutUs{
-  padding-top: 55px;
+  // padding-top: 55px;
     line-height: normal;
     .bgAbout{
+      
         background: linear-gradient(
         to right,
         rgba(247, 225, 29, 0.849),
@@ -119,13 +120,12 @@
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-
         }
     }
     .abouUsContent{
       padding-top: 60px;
       p{
-        font-weight: 500;
+        font-weight: 400;
       }
     }
 }

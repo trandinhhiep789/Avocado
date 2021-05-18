@@ -178,7 +178,7 @@
   margin: 25px 25px 0 25px;
   color: #428C27;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
   text-align: left;
 }
 
@@ -186,7 +186,7 @@
   margin: 15px 25px 12px 25px;
   color: #29303b;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   text-align: left;
 }
 
@@ -205,7 +205,7 @@
 .carouselMain .carouselMainItem .item1 .item2 .itemContent div a {
   color: #428C27;
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 500;
   text-decoration: none;
 }
 
@@ -464,7 +464,7 @@
   padding-top: 100px;
   color: #29303b;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .hinh1 {
@@ -497,10 +497,9 @@ header .header_main .navbar div a img {
 
 header .header_main .navbar .collapse ul a {
   cursor: pointer;
-  font-family: 'Kiwi Maru', serif;
   color: #428C27;
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
@@ -529,10 +528,9 @@ footer .footer_main .row .cot_1 img {
 }
 
 footer .footer_main .row .cot_2 ul a {
-  font-family: 'Kiwi Maru', serif;
   color: #fff;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 footer .footer_main .row .cot_3 .icon_mot .fa-twitter {
@@ -591,10 +589,6 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
           transform: scale(1.3);
 }
 
-.ELTR {
-  font-family: 'Kiwi Maru', serif;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -603,7 +597,6 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
 }
 
 .aboutUs {
-  padding-top: 55px;
   line-height: normal;
 }
 
@@ -630,7 +623,7 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
 }
 
 .aboutUs .abouUsContent p {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 768px) {
@@ -703,6 +696,12 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
 
 .pro1 .card :hover .xem1 {
   opacity: 1;
+}
+
+.nutThoatModal {
+  position: fixed;
+  right: 10%;
+  top: 16%;
 }
 
 .pro2 .card .imgProduct2 {
@@ -862,7 +861,15 @@ div .card :hover .xem6 {
 .card .card-body .tieuDeCard {
   color: #428C27;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
+}
+
+.card .card-body .noiDungCard {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .card .card-body .gia .giaHienTai {
@@ -876,6 +883,11 @@ div .card :hover .xem6 {
 
 .card .card-body button {
   border-radius: 0 !important;
+}
+
+.khungHinh {
+  -webkit-box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 div .container .noidungBaiDang {
@@ -1201,6 +1213,14 @@ div .container .row .cot2 :hover .noiDung2 {
 .contentGioHang {
   padding-top: 100px;
   padding-bottom: 50px;
+}
+
+.tenSp_TrongGioHang {
+  width: 500px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .ReactModal__Content {

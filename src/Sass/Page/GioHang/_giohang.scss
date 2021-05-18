@@ -13,3 +13,11 @@
     padding-top: 100px;
     padding-bottom: 50px;
 }
+
+.tenSp_TrongGioHang{
+    width: 500px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}

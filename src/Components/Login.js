@@ -11,9 +11,9 @@ export default function Login() {
           <div className=" row justify-content-end">
             <div className="form_login col-12 col-md-8 col-lg-6 col-xl-5 text-center">
               <div className="fdb-box text-center">
-                <div className="row">
+                <div className="row m-0 p-0">
                   <div className="col">
-                    <h1 className="text-light">Đăng nhập</h1>
+                    <h1 className="text-light m-0 p-0">Đăng nhập</h1>
                     <p className="lead"></p>
                   </div>
                 </div>

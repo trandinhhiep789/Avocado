@@ -35,12 +35,12 @@
             .itemContent{
               h5{
                 margin: 25px 25px 0 25px;
-                @include styleText($color-green-1, $fs-2, $fw-bold-3);
+                @include styleText($color-green-1, $fs-2, $fw-bold-2);
                 text-align: left;
               }
               h6{
                 margin: 15px 25px 12px 25px;
-                @include styleText($color-black-0, $fs-0, $fw-bold-3);
+                @include styleText($color-black-0, $fs-0, $fw-bold-2);
                 text-align: left;
               }
               p{

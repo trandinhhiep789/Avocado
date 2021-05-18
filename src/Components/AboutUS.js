@@ -4,8 +4,11 @@ import logo from "../Asset/AboutUs/nen_trong.png";
 export default function AboutUS() {
   return (
     <div id="aboutus" className="aboutUs container text-center">
-      <h1 className="p-4">About us</h1>
-      <div className="bgAbout">
+      <div className="pb-4 contentProduct">
+        <h1 className="">About us</h1>
+      </div>
+      
+      <div className="bgAbout" style={{marginTop:'50px'}}>
         <img className="logoAbout" src={logo} />
       </div>
       <div className="abouUsContent">

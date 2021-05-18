@@ -10,7 +10,7 @@ export default function BaiDang() {
         </div>
         <div className="row">
           <div className="cot1 col-sm-6 .col-12  ">
-            <div className="baiDang1">
+            <div className="baiDang1 khungHinh">
               <div className="noiDung1 text-center">
                 <h3>KEM CHỐNG NẮNG</h3>
               </div>
@@ -31,7 +31,7 @@ export default function BaiDang() {
           </div>
 
           <div className="cot2 col-sm-6 .col-12 ">
-            <div className="baiDang2">
+            <div className="baiDang2 khungHinh">
               <div className="noiDung2 text-center">
                 <h3>KEM CHỐNG NẮNG</h3>
               </div>

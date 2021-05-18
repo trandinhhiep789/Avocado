@@ -8,8 +8,6 @@ import {
 
 import gioHangTrong from "../../Asset/GioHang/empty_cart.png";
 
-//validate
-import isEmpty from "validator/lib/isEmpty";
 
 export default function GioHang() {
   const dispatch = useDispatch();

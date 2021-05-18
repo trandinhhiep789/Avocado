@@ -22,8 +22,9 @@ header{
                 ul{
                     a{
                         cursor: pointer;
-                        font-family: 'Kiwi Maru', serif;
-                        @include styleText($color-green-1, $fs-2, $fw-bold-3)
+                        // font-family: 'Kiwi Maru', serif;
+                        // font-family: 'Patrick Hand', cursive;
+                        @include styleText($color-green-1, $fs-2, $fw-bold-2)
                     }
                 }
             }

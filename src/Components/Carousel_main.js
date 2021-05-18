@@ -61,7 +61,7 @@ export default function Carousel_main() {
             <div className="bg-white item2">
               <div className="itemContent">
                 <h5 className="">
-                  CHÚNG TA CẦN KEM CHỐNG NẮNG HƠN BAO GIỜ HẾT
+                  Chúng ta cần kem chống nắng hơn bap giờ hết
                 </h5>
 
                 <h6 className="">Tác dụng của kem chống nắng</h6>
@@ -91,7 +91,7 @@ export default function Carousel_main() {
             <div className="bg-white item2">
               <div className="itemContent">
                 <h5 className="">
-                  CHÚNG TA CẦN KEM CHỐNG NẮNG HƠN BAO GIỜ HẾT
+                  Chúng ta cần kem chống nắng hơn bap giờ hết
                 </h5>
 
                 <h6 className="">Tác dụng của kem chống nắng</h6>
@@ -121,7 +121,7 @@ export default function Carousel_main() {
             <div className="bg-white item2">
               <div className="itemContent">
                 <h5 className="">
-                  CHÚNG TA CẦN KEM CHỐNG NẮNG HƠN BAO GIỜ HẾT
+                  Chúng ta cần kem chống nắng hơn bap giờ hết
                 </h5>
 
                 <h6 className="">Tác dụng của kem chống nắng</h6>

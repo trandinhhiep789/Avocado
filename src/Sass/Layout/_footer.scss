@@ -12,7 +12,7 @@ footer{
             .cot_2{
                 ul{
                     a{
-                        font-family: 'Kiwi Maru', serif;
+                        // font-family: 'Kiwi Maru', serif;
                     @include styleText($color-white-0, $fs-0, $fw-bold-3)
                     }
                 }
@@ -66,5 +66,6 @@ footer{
 }
 
 .ELTR{
-    font-family: 'Kiwi Maru', serif;
+    // font-family: 'Kiwi Maru', serif;
+    // font-family: 'Patrick Hand', cursive;
 }

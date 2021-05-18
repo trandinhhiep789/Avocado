@@ -19,7 +19,9 @@ code {
 body{
   margin: 0;
   padding: 0;
-  font-family: 'Kiwi Maru', serif;
+  /* font-family: 'Kiwi Maru', serif; */
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', Montserrat;
 }
 
 

@@ -12,7 +12,7 @@ export default function Product_5() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   return (
     <div className="pro5 m-3">
-      <div className="card" style={{ width: "15rem" }}>
+      <div className="card khungHinh p-3" >
         {/* <img src={nam} className="card-img-top" alt="..." /> */}
         <div className="imgProduct5">
           <button
@@ -24,7 +24,7 @@ export default function Product_5() {
           <Modal isOpen={modalIsOpen}>
             <div className="nutThoatModal text-right">
               <button
-                className=" mt-4 btn btn-outline-success"
+                className=" mt-4 btn btn-danger"
                 style={{ borderRadius: "0" }}
                 onClick={() => setModalIsOpen(false)}
               >
@@ -32,9 +32,9 @@ export default function Product_5() {
               </button>
             </div>
             <div className="container">
-              <div className="row">
+              <div className="row khungHinh">
                 <div className="col-xl-6 imgModal">
-                  <img src={nam} style={{ width: "100%" }} />
+                  <img className="" src={nam} style={{ width: "100%" }} />
                 </div>
                 <div className="col-xl-6 contentModal">
                   <h3>{sp[0].tenSanPham}</h3>
@@ -47,7 +47,7 @@ export default function Product_5() {
                   <p style={{ fontWeight: 700 }}>Loại da</p>
                   <p>{sp[0].loaiDaPhuhop}</p>
                   <div className=" d-flex">
-                    <p className=" fw-bolder">420,000đ</p>
+                    <p className=" fw-bolder text-danger" style={{ fontWeight: 700 }}>420,000đ</p>
                     <p
                       className=" mx-2"
                       style={{ textDecoration: "line-through" }}
@@ -72,10 +72,10 @@ export default function Product_5() {
         <div className="card-body">
           <h6 className="tieuDeCard">LA ROCHE POSAY</h6>
           <p className="noiDungCard">
-            Xịt Chống Nắng Bảo Vệ Da Anthelios Anti-Shine...
+          {sp[0].tenSanPham}
           </p>
           <div className="gia d-flex">
-            <p className="giaHienTai fw-bolder">420,000đ</p>
+            <p className="giaHienTai fw-bolder text-danger">420,000đ</p>
             <p className="giaCu mx-2 text-decoration-line-through">500,000đ</p>
           </div>
           <button

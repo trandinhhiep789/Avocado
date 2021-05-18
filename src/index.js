@@ -4,6 +4,9 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+// import boostrap
+// import 'bootstrap/dist/css/bootstrap.min.css';
+
 // Cấu hình redux
 import { BrowserRouter, Router } from "react-router-dom";
 import { applyMiddleware, createStore } from "redux";
