@@ -31,3 +31,39 @@
         }
     }
 }
+
+
+@include responsive("medium"){
+    .pro3{
+        .card{
+            .imgProduct3{
+                
+                height: 310px;
+            }
+        }
+    
+        
+    }
+}
+
+@include responsive("small"){
+    .pro3{
+        .card{
+            .imgProduct3{
+                
+                height: 440px;
+            }
+        }
+    }
+}
+
+
+@include responsive("iphone678plus"){
+    .pro3{
+        .card{
+            .imgProduct3{
+                height: 320px;
+            }
+        }
+    }
+}

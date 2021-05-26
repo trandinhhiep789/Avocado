@@ -704,6 +704,24 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
   top: 16%;
 }
 
+@media screen and (max-width: 768px) {
+  .pro1 .card .imgProduct1 {
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pro1 .card .imgProduct1 {
+    height: 440px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .pro1 .card .imgProduct1 {
+    height: 320px;
+  }
+}
+
 .pro2 .card .imgProduct2 {
   background-image: url(/src/Asset/Carousel/kem_duong_2.png);
   background-size: cover;
@@ -731,6 +749,24 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
 
 .pro2 .card :hover .xem2 {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .pro2 .card .imgProduct2 {
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pro2 .card .imgProduct2 {
+    height: 440px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .pro2 .card .imgProduct2 {
+    height: 320px;
+  }
 }
 
 .pro3 .card .imgProduct3 {
@@ -762,6 +798,24 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .pro3 .card .imgProduct3 {
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pro3 .card .imgProduct3 {
+    height: 440px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .pro3 .card .imgProduct3 {
+    height: 320px;
+  }
+}
+
 .pro4 .card .imgProduct4 {
   background-image: url(/src/Asset/Carousel/tay_trang_2.png);
   background-size: cover;
@@ -789,6 +843,24 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
 
 .pro4 .card :hover .xem4 {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .pro4 .card .imgProduct4 {
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pro4 .card .imgProduct4 {
+    height: 440px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .pro4 .card .imgProduct4 {
+    height: 320px;
+  }
 }
 
 .pro5 .card .imgProduct5 {
@@ -820,6 +892,24 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .pro5 .card .imgProduct5 {
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pro5 .card .imgProduct5 {
+    height: 440px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .pro5 .card .imgProduct5 {
+    height: 320px;
+  }
+}
+
 div .card .imgProduct6 {
   background-image: url(/src/Asset/Carousel/xit_khoang_2.png);
   background-size: cover;
@@ -847,6 +937,24 @@ div .card .imgProduct6 .xem6 {
 
 div .card :hover .xem6 {
   opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .pro6 .card .imgProduct6 {
+    height: 310px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .pro6 .card .imgProduct6 {
+    height: 440px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .pro6 .card .imgProduct6 {
+    height: 320px;
+  }
 }
 
 .card {

@@ -44,5 +44,42 @@
     top: 16%;
 }
 
+@include responsive("medium"){
+    .pro1{
+        .card{
+            .imgProduct1{
+                
+                height: 310px;
+            }
+        }
+    
+        
+    }
+}
+
+@include responsive("small"){
+    .pro1{
+        .card{
+            .imgProduct1{
+                
+                height: 440px;
+            }
+        }
+    }
+}
+
+
+@include responsive("iphone678plus"){
+    .pro1{
+        .card{
+            .imgProduct1{
+                height: 320px;
+            }
+        }
+    }
+}
+
+
+
 
 
