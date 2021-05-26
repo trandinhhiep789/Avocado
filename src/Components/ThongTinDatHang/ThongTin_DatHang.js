@@ -246,9 +246,9 @@ export default function ThongTin_DatHang() {
             {renderGiohang()}
             <br></br>
             <div style={{ fontWeight: "700" }}>
-              Tổng tiền (chưa tính phí ship):
+              Tổng tiền:
             </div>
-            <div style={{ fontWeight: "700", fontSize: "40px" }}>
+            <div className="text-danger" style={{ fontWeight: "700", fontSize: "40px" }}>
               {tongTien()},000 vnđ
             </div>
           </div>

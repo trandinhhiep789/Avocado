@@ -32,7 +32,7 @@ export default function Header() {
                 style={{ color: "#428C27" }}
               />
               <p
-                className="bg-danger text-center"
+                className="btn bg-danger text-center "
                 style={{
                   position: "absolute",
                   right: "-2px",
@@ -53,6 +53,8 @@ export default function Header() {
           <div className="col-2 text-left">
             <NavLink to="/trangchu">
               <img src="/img/Header/nen_trong.png" alt="image" />
+              {/* logo tết */}
+              {/* <img src="/img/Header/onlinelogomaker-051921-2133-4036-500.jpg" alt="image" /> */}
             </NavLink>
           </div>
 
@@ -146,7 +148,7 @@ export default function Header() {
                       style={{ color: "#428C27" }}
                     />
                     <p
-                      className="bg-danger text-center"
+                      className="btn bg-danger text-center "
                       style={{
                         position: "absolute",
                         right: "-2px",

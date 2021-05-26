@@ -73,28 +73,34 @@ export default function GioHang() {
           </td>
           <td>{sp.tenSanPham}</td>
           <td>
+            <div className="d-flex">
+              
             <button
-              className=""
+              className="btn btn-outline-success"
               onClick={() => {
                 dispatch(tangGiamSanPham(sp.maSanPham, false));
               }}
             >
               -
             </button>
+            <div className="btn">
             {sp.soLuong}
+            </div>
             <button
-              className=""
+              className="btn btn-outline-success"
               onClick={() => {
                 dispatch(tangGiamSanPham(sp.maSanPham, true));
               }}
             >
               +
             </button>
+          
+            </div>
           </td>
-          <td>{sp.donGia}</td>
-          <td>{sp.soLuong * sp.donGia}</td>
+          <td><div className="btn">{sp.donGia}</div></td>
+          <td><div className="btn">{sp.soLuong * sp.donGia}</div></td>
           <td>
-            <button
+            <button className="btn btn-outline-danger"
               onClick={() => {
                 dispatch(xoaSanPham(sp.maSanPham));
               }}
