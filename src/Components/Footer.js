@@ -74,6 +74,7 @@ export default function Footer() {
           <div className="col text-center text-white ELTR">© 2021 ELTR.SC</div>
         </div>
       </div>
+      <div id="fb-root"></div>
     </footer>
   );
 }

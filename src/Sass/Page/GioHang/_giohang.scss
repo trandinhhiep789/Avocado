@@ -15,9 +15,17 @@
 }
 
 .tenSp_TrongGioHang{
-    width: 500px;
+    width: 250px;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+}
+
+.tenSanPham{
+    width: 10px !important;
+    overflow: hidden;
+    // xuống dòng
+    white-space: nowrap; 
+    text-overflow: ellipsis;
 }

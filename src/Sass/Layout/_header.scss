@@ -13,7 +13,7 @@ header{
             div{
                 a{
                     img{
-                        width: 150px;
+                        width: 120px;
                     }
                 }
             }
@@ -24,7 +24,7 @@ header{
                         cursor: pointer;
                         // font-family: 'Kiwi Maru', serif;
                         // font-family: 'Patrick Hand', cursive;
-                        @include styleText($color-green-1, $fs-2, $fw-bold-2)
+                        @include styleText($color-green-1, $fs-3, $fw-bold-2)
                     }
                 }
             }
@@ -52,7 +52,8 @@ header{
             .navbar{
                 .gioHang{
                     display: block;
-                    font-size: 20px;
+                    font-size: 29px;
+                    color: "#428C27";
                 }
                 .collapse{
                     ul{

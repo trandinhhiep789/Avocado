@@ -9,6 +9,7 @@
         }
         .noiDungCard{
             overflow: hidden;
+            // thay thế bằng dấu ...
             text-overflow: ellipsis;
             -webkit-line-clamp: 2;
             display: -webkit-box;
@@ -33,5 +34,10 @@
 .khungHinh{
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+.ReactModal__Content{
+    padding: 0 !important;
+}
+
 
 

@@ -3,7 +3,7 @@ import swal from "sweetalert2";
 const stateDefault = {
   gioHang: [
     {
-      maSanPham: 0,
+      _id: 0,
       tenSanPham: "",
       thongTinSanPham: "thongTinSanPham",
       congDung: "congDung",
@@ -11,8 +11,10 @@ const stateDefault = {
       huongDanSuDung: "huongDanSuDung",
       soLuong: 0,
       donGia: 0,
+      imagleUrl: []
     },
   ],
+  danhSachSanPham: []
 };
 
 const QuanLySanPhamReducer = (state = stateDefault, action) => {
@@ -26,11 +28,11 @@ const QuanLySanPhamReducer = (state = stateDefault, action) => {
       console.log("spGH:");
       console.log(action.spGH);
 
-      console.log("state.gioHang");
-      console.log(state.gioHang.maSanPham);
+      console.log("state.gioHang_id");
+      console.log(state.gioHang._id);
 
       const index = gioHangUpdate.findIndex((card, i) => {
-        return card.maSanPham == action.spGH.maSanPham;
+        return card._id == action.spGH._id;
       });
 
       console.log("index:");
@@ -41,11 +43,7 @@ const QuanLySanPhamReducer = (state = stateDefault, action) => {
         //tăng số lượng
         gioHangUpdate[index].soLuong += 1;
       } else {
-        //ko tìm thấy thì thêm vào mảng
-        //copy thuộc tính SP rồi thêm số lượng
-        // const newCard = { ...action.spGH, soLuong: 1 };
-        // cardList = [...cardList, newCard];
-        // gioHangUpdate = { ...newCard };
+        //ko tìm thấy thì thêm vào mảng gio hàng
         gioHangUpdate.push(action.spGH);
       }
 
@@ -57,7 +55,7 @@ const QuanLySanPhamReducer = (state = stateDefault, action) => {
 
       //xóa cái sản phẩm thừa trong giỏ
       const indexDeleteAuto = gioHangUpdate.findIndex((card, i) => {
-        return card.maSanPham == 0;
+        return card._id == 0;
       });
       if (indexDeleteAuto != -1) {
         gioHangUpdate.splice(indexDeleteAuto, 1);
@@ -72,7 +70,7 @@ const QuanLySanPhamReducer = (state = stateDefault, action) => {
     case "XOA_SAN_PHAM": {
       let gioHangUpdate = [...state.gioHang];
       const index = gioHangUpdate.findIndex((card, i) => {
-        return card.maSanPham == action.maSanPhamDuocClick;
+        return card._id == action.maSanPhamDuocClick;
       });
       if (index !== -1) {
         gioHangUpdate.splice(index, 1);
@@ -83,8 +81,11 @@ const QuanLySanPhamReducer = (state = stateDefault, action) => {
 
     case "TANG_GIAM_SANPHAM": {
       let gioHangUpdate = [...state.gioHang];
+      console.log("TANG_GIAM_SANPHAM")
+      console.log(gioHangUpdate)
+
       const index = gioHangUpdate.findIndex((card, i) => {
-        return card.maSanPham == action.maSanPham;
+        return card._id == action._id;
       });
 
       if (index != -1) {
@@ -106,6 +107,11 @@ const QuanLySanPhamReducer = (state = stateDefault, action) => {
       state.gioHang = gioHangUpdate;
       return { ...state };
     }
+
+    case "LAY_DANH_SACH_SANPHAM_ACTION":{
+      state.danhSachPhim = action.danhSachPhim;
+      return {...state};
+  }
     default:
       return { ...state };
   }

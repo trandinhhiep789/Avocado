@@ -22,4 +22,11 @@
 @import "./Page/Modal/modal";
 
 //ThongTinDatHang
-@import "./Page/ThongTinDatHang/thongtindathang"
+@import "./Page/ThongTinDatHang/thongtindathang";
+
+// user
+@import "./User/signup";
+@import "./User/login";
+
+//admin
+@import "./Admin/admin";

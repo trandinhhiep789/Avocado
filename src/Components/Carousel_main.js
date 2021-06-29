@@ -47,7 +47,7 @@ export default function Carousel_main() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };

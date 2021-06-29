@@ -24,8 +24,9 @@ const BackToTop = () => {
       className="d-flex scroll-to-top cursor-pointer text-center"
       onClick={scrollToTop}
     >
-      <p style={{ fontWeight: "600" }}>back to top</p>
-      <i className="fas fa-long-arrow-alt-right mt-2 ml-2"></i>
+      {/* <p style={{ fontWeight: "600" }}>back to top</p>
+      <i className="fas fa-long-arrow-alt-right mt-2 ml-2"></i> */}
+      <i className="fas fa-arrow-circle-up" style={{fontSize:"40px"}}></i>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 .pro1{
     .card{
         .imgProduct1{
-            background-image: url(/src/Asset/Carousel/chong_nang_2.png);
+            // background-image: url(/src/Asset/Carousel/chong_nang_2.png);
             background-size: cover;
             height: 240px;
             width: 100%;
@@ -55,6 +55,18 @@
     
         
     }
+
+    // cái khung model và cái nút thoát
+    .ReactModal__Content{
+        width: 85% !important;
+        margin: 220px auto !important;
+    }
+
+    .nutThoatModal{
+        position: fixed;
+        right: 8%;
+        top: 19%;
+    }
 }
 
 @include responsive("small"){
@@ -66,6 +78,17 @@
             }
         }
     }
+
+    .ReactModal__Content{
+        width: 85% !important;
+        margin: 100px auto !important;
+    }
+
+    .nutThoatModal{
+        position: fixed;
+        right: 8%;
+        top: 16%;
+    }
 }
 
 
@@ -76,6 +99,43 @@
                 height: 320px;
             }
         }
+    }
+
+    .nutThoatModal{
+        position: fixed;
+        right: 5%;
+        top: 9%;
+    }
+}
+
+@include responsive("iphonex"){
+
+    .ReactModal__Content{
+        width: 80% !important;
+        margin: 90px auto !important;
+    }
+    
+    .nutThoatModal{
+        z-index: 100;
+        position: fixed;
+        right: 10%;
+        top: 13%;
+    }
+}
+
+
+@include responsive("iphone5"){
+
+    .ReactModal__Content{
+        width: 80% !important;
+        margin: 50px auto !important;
+    }
+    
+    .nutThoatModal{
+        z-index: 100;
+        position: fixed;
+        right: 9%;
+        top: 10%;
     }
 }
 

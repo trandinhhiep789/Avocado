@@ -19,7 +19,7 @@ export const HomeTemplate_1= (props) => {
               <div>
                 <Header_1/>
                 <Component {...propsRoute} />
-                <Footer />
+                <Footer className="w-100"/>
               </div>
               <MessengerCustomerChat
                 pageId="112035807606509"

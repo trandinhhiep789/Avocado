@@ -72,6 +72,7 @@ export default function Product_1() {
               </div>
             </div>
           </Modal>
+        
         </div>
         
         <div className="card-body">

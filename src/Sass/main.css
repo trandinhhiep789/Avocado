@@ -492,20 +492,21 @@ header .header_main .navbar .gioHang {
 }
 
 header .header_main .navbar div a img {
-  width: 150px;
+  width: 120px;
 }
 
 header .header_main .navbar .collapse ul a {
   cursor: pointer;
   color: #428C27;
-  font-size: 1.4rem;
+  font-size: 24px;
   font-weight: 500;
 }
 
 @media screen and (max-width: 768px) {
   header .header_main .navbar .gioHang {
     display: block;
-    font-size: 20px;
+    font-size: 29px;
+    color: "#428C27";
   }
   header .header_main .navbar .collapse ul li .gioHangSau {
     display: none;
@@ -670,7 +671,6 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
 }
 
 .pro1 .card .imgProduct1 {
-  background-image: url(/src/Asset/Carousel/chong_nang_2.png);
   background-size: cover;
   height: 240px;
   width: 100%;
@@ -708,17 +708,66 @@ footer .footer_main .row .cot_3 .icon_bon :hover {
   .pro1 .card .imgProduct1 {
     height: 310px;
   }
+  .ReactModal__Content {
+    width: 85% !important;
+    margin: 220px auto !important;
+  }
+  .nutThoatModal {
+    position: fixed;
+    right: 8%;
+    top: 19%;
+  }
 }
 
 @media screen and (max-width: 576px) {
   .pro1 .card .imgProduct1 {
     height: 440px;
   }
+  .ReactModal__Content {
+    width: 85% !important;
+    margin: 100px auto !important;
+  }
+  .nutThoatModal {
+    position: fixed;
+    right: 8%;
+    top: 16%;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .pro1 .card .imgProduct1 {
     height: 320px;
+  }
+  .nutThoatModal {
+    position: fixed;
+    right: 5%;
+    top: 9%;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .ReactModal__Content {
+    width: 80% !important;
+    margin: 90px auto !important;
+  }
+  .nutThoatModal {
+    z-index: 100;
+    position: fixed;
+    right: 10%;
+    top: 13%;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .ReactModal__Content {
+    width: 80% !important;
+    margin: 50px auto !important;
+  }
+  .nutThoatModal {
+    z-index: 100;
+    position: fixed;
+    right: 9%;
+    top: 10%;
   }
 }
 
@@ -998,6 +1047,22 @@ div .card :hover .xem6 {
           box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
+.ReactModal__Content {
+  padding: 0 !important;
+}
+
+.green {
+  color: green;
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
+}
+
 div .container .noidungBaiDang {
   padding: 30px;
   width: 50%;
@@ -1270,12 +1335,10 @@ div .container .row .cot2 :hover .noiDung2 {
 .scroll-to-top {
   position: fixed;
   bottom: 50px;
-  right: -3%;
-  color: rebeccapurple;
+  right: 0%;
+  color: #428C27;
   cursor: pointer;
   z-index: 1;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
 }
 
 .scroll-to-top .icon {
@@ -1306,29 +1369,24 @@ div .container .row .cot2 :hover .noiDung2 {
   }
 }
 
-@media screen and (max-width: 768px) {
-  .scroll-to-top {
-    right: -8%;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .scroll-to-top {
-    right: -10%;
-  }
-}
-
 .contentGioHang {
   padding-top: 100px;
   padding-bottom: 50px;
 }
 
 .tenSp_TrongGioHang {
-  width: 500px;
+  width: 250px;
   overflow: hidden;
   text-overflow: ellipsis;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
+}
+
+.tenSanPham {
+  width: 10px !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .ReactModal__Content {
@@ -1379,5 +1437,330 @@ div .container .row .cot2 :hover .noiDung2 {
 .contentDatHang {
   padding-top: 100px;
   padding-bottom: 50px;
+}
+
+.signUp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signUp .signUp__form {
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.signUp .signUp__form .signUp__form-logo {
+  width: 100%;
+  text-align: center;
+}
+
+.signUp .signUp__form .signUp__form-logo .logo {
+  width: 50px;
+}
+
+.signUp .signUp__form .signUp__form-title {
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.signUp .signUp__form .form__contact {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.signUp .signUp__form .signUp__form-input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.signUp .signUp__form .signUp__form-input .formSigup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid rgba(187, 185, 185, 0.233);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  background-color: #f5f6f7;
+  padding: 10px 15px;
+  margin: 0 5px;
+}
+
+.signUp .signUp__form .signUp__form-input .formSigup i {
+  color: #acacac;
+}
+
+.signUp .signUp__form .signUp__form-input .formSigup input {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.signUp .signUp__form .signUp__form-input .formSigup input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.signUp .signUp__form .signUp__form-input button {
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+  font-weight: normal;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#00de00), to(#fffb00));
+  background: linear-gradient(to right, #00de00, #fffb00);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.signUp .signUp__form .signUp__form-input button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#fffb00), to(#00de00));
+  background: linear-gradient(to right, #fffb00, #00de00);
+}
+
+.signUp .signUp__form .signUp__form-note {
+  text-align: right;
+}
+
+.signUp .signUp__form .signUp__form-note span {
+  color: black;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.signUp .signUp__form .signUp__form-note span a {
+  color: blue;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.signUp .signUp__form .signUp__form-note span a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 576px) {
+  .signUp .signUp__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+.login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login .login__form {
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.login .login__form .login__form-logo {
+  width: 100%;
+  text-align: center;
+}
+
+.login .login__form .login__form-logo .logo {
+  width: 50px;
+}
+
+.login .login__form .login__form-title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: normal;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.login .login__form .login__form-input {
+  margin-bottom: 20px;
+}
+
+.login .login__form .login__form-input .formLogin {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid rgba(187, 185, 185, 0.233);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  background-color: #f5f6f7;
+  padding: 10px 15px;
+}
+
+.login .login__form .login__form-input .formLogin i {
+  color: #acacac;
+}
+
+.login .login__form .login__form-input .formLogin input {
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.login .login__form .login__form-input .formLogin input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.login .login__form .login__form-input button {
+  width: 100%;
+  height: 100%;
+  font-size: 17px;
+  font-weight: normal;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: white;
+  background: -webkit-gradient(linear, left top, right top, from(#00de6ffb), to(#00bddefb));
+  background: linear-gradient(to right, #00de6ffb, #00bddefb);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.login .login__form .login__form-input button:hover {
+  background: -webkit-gradient(linear, right top, left top, from(#00bddefb), to(#00de6ffb));
+  background: linear-gradient(to left, #00bddefb, #00de6ffb);
+}
+
+.login .login__form .login__form-remember {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.login .login__form .login__form-remember .remember__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login .login__form .login__form-remember .remember__left label {
+  font-size: 12px;
+  font-weight: normal;
+  color: black;
+  margin-left: 5px !important;
+}
+
+.login .login__form .login__form-remember .remember__right a {
+  color: blue;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.login .login__form .login__form-remember .remember__right a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+.login .login__form .login__form-note {
+  text-align: right;
+}
+
+.login .login__form .login__form-note span {
+  color: black;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.login .login__form .login__form-note span a {
+  color: blue;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.login .login__form .login__form-note span a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 576px) {
+  .login .login__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+}
+
+header {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: none;
+}
+
+.ant-layout-header {
+  background: none !important;
 }
 /*# sourceMappingURL=main.css.map */

@@ -8,8 +8,39 @@ import {
 
 import gioHangTrong from "../../Asset/GioHang/empty_cart.png";
 
+// thu vien ant
+import { Popconfirm, Button } from "antd";
+import GioHangChiTiet from "./GioHangChiTiet";
 
 export default function GioHang() {
+  // thong bao neu khach hang muon huy bo san pham
+
+  // const [visible, setVisible] = useState({
+  //   visible : true
+  // })
+  // const [confirmLoading, setConfirmLoading] = useState({
+  //   confirmLoading : true
+  // })
+  const [visible, setVisible] = React.useState(false);
+  const [confirmLoading, setConfirmLoading] = React.useState(false);
+
+  const showPopconfirm = () => {
+    setVisible(true);
+  };
+
+  const handleOk = () => {
+    setConfirmLoading(true);
+    setTimeout(() => {
+      setVisible(false);
+      setConfirmLoading(false);
+    }, 1000);
+  };
+
+  const handleCancel = () => {
+    console.log("Clicked cancel button");
+    setVisible(false);
+  };
+
   const dispatch = useDispatch();
   const mangGioHang = useSelector((state) => state.stateSanPham.gioHang);
 
@@ -24,11 +55,11 @@ export default function GioHang() {
       >
         <div className="emptycart">
           <div className="emptycartImg"></div>
-          <img src={gioHangTrong} />
+          <img alt="gio hang trong" className="" src={gioHangTrong} />
         </div>
         <p className="m-3 p-3">Không có sản phẩm nào trong giỏ hàng của bạn</p>
         <NavLink
-          to="/trangchu"
+          to="/danhsachsanpham"
           className="bg-success text-light p-3"
           style={{ textDecoration: "none" }}
         >
@@ -37,7 +68,7 @@ export default function GioHang() {
       </div>
     );
   } else {
-    if (mangGioHang[0].maSanPham == 0) {
+    if (mangGioHang[0]._id == 0) {
       console.log("mangGioHang[0].maSanPham == 0");
       return (
         <div
@@ -46,13 +77,13 @@ export default function GioHang() {
         >
           <div className="emptycart">
             <div className="emptycartImg"></div>
-            <img src={gioHangTrong} />
+            <img alt="gio hang trong" className="" src={gioHangTrong} />
           </div>
           <p className="m-3 p-3">
             Không có sản phẩm nào trong giỏ hàng của bạn
           </p>
           <NavLink
-            to="/trangchu"
+            to="/danhsachsanpham"
             className="bg-success text-light p-3"
             style={{ textDecoration: "none" }}
           >
@@ -68,45 +99,68 @@ export default function GioHang() {
       return (
         <tr key={i}>
           <td>
-            <img width={100} height={100} src={sp.hinhAnh} />
+            <img width={100} height={100} src={sp.hinhAnh[0]} />
             {/* {sp.hinhAnh} */}
           </td>
-          <td>{sp.tenSanPham}</td>
+          <td className="tenSanPham" style={{ width: "10%" }}>
+            {sp.tenSanPham}
+          </td>
           <td>
             <div className="d-flex">
-              
-            <button
-              className="btn btn-outline-success"
-              onClick={() => {
-                dispatch(tangGiamSanPham(sp.maSanPham, false));
-              }}
-            >
-              -
-            </button>
-            <div className="btn">
-            {sp.soLuong}
-            </div>
-            <button
-              className="btn btn-outline-success"
-              onClick={() => {
-                dispatch(tangGiamSanPham(sp.maSanPham, true));
-              }}
-            >
-              +
-            </button>
-          
+              <button
+                className="btn btn-outline-success"
+                onClick={() => {
+                  dispatch(tangGiamSanPham(sp.maSanPham, false));
+                }}
+              >
+                -
+              </button>
+              <div className="btn">{sp.soLuong}</div>
+              <button
+                className="btn btn-outline-success"
+                onClick={() => {
+                  dispatch(tangGiamSanPham(sp.maSanPham, true));
+                }}
+              >
+                +
+              </button>
             </div>
           </td>
-          <td><div className="btn">{sp.donGia}</div></td>
-          <td><div className="btn">{sp.soLuong * sp.donGia}</div></td>
           <td>
-            <button className="btn btn-outline-danger"
+            <div className="btn">{sp.donGiaMoi}</div>
+          </td>
+          <td>
+            <div className="btn">{sp.soLuong * sp.donGiaMoi}</div>
+          </td>
+          <td>
+            {/* <button
+              className="btn btn-outline-danger"
               onClick={() => {
                 dispatch(xoaSanPham(sp.maSanPham));
               }}
             >
               Xóa
-            </button>
+            </button> */}
+            <Popconfirm
+              title="Bạn có thực sự muốn xóa?"
+              visible={visible}
+              onConfirm={() => {
+                // handleOk
+                setConfirmLoading(true);
+                setTimeout(() => {
+                  setVisible(false);
+                  setConfirmLoading(false);
+                  dispatch(xoaSanPham(sp.maSanPham));
+                }, 1000);
+              }}
+              okButtonProps={{ loading: confirmLoading }}
+              onCancel={handleCancel}
+              maSanPham={sp.maSanPham}
+            >
+              <Button type="primary" onClick={showPopconfirm}>
+                Xóa
+              </Button>
+            </Popconfirm>
           </td>
         </tr>
       );
@@ -115,7 +169,7 @@ export default function GioHang() {
 
   const tongTien = () => {
     return mangGioHang.reduce((tong, mangGioHang, i) => {
-      return (tong += mangGioHang.soLuong * mangGioHang.donGia);
+      return (tong += mangGioHang.soLuong * mangGioHang.donGiaMoi);
     }, 0);
   };
 
@@ -124,18 +178,21 @@ export default function GioHang() {
       <div className="container">
         <h1 className="mt-4">Giỏ hàng</h1>
         <div className="">
-          <div className="">
-            <table className="table">
+          <div className="w-100" style={{ overflowX: "auto" }}>
+            <table className="table table-striped">
               <thead>
                 <tr>
-                  <th></th>
-                  <th>Tên sản phẩm</th>
-                  <th>Số lượng</th>
-                  <th>Đơn giá</th>
-                  <th>Thành tiền</th>
+                  <th style={{ width: "10%" }}>Hình ảnh</th>
+                  <th style={{ width: "10%" }}>Tên sản phẩm</th>
+                  <th style={{ width: "10%" }}>Số lượng</th>
+                  <th style={{ width: "10%" }}>Đơn giá</th>
+                  <th style={{ width: "10%" }}>Thành tiền</th>
+                  <th style={{ width: "10%" }} className="text-center">
+                    <i className="fas fa-cogs"></i>
+                  </th>
                 </tr>
               </thead>
-              <tbody>{renderGiohang()}</tbody>
+              <tbody>{mangGioHang.map((sp, i) => <GioHangChiTiet {...sp}/>) }</tbody>
             </table>
           </div>
           <div className="">
